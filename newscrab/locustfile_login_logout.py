@@ -1,7 +1,7 @@
-from locust import HttpUser, task, between
+from locust import HttpUser, task, constant
 
 class MyUser(HttpUser):
-    wait_time = between(1, 1)  # 각 요청 사이의 대기 시간
+    wait_time = constant(1)  # 각 요청 사이의 대기 시간
     host = "https://newscrab.duckdns.org"
 
     @task
