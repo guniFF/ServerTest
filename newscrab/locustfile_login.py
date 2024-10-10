@@ -1,7 +1,7 @@
 from locust import HttpUser, task, constant
 
 class MyUser(HttpUser):
-    wait_time = constant(1) 
+    wait_time = constant(20) 
     host = "https://newscrab.duckdns.org"
 
     @task
